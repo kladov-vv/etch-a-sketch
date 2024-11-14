@@ -5,9 +5,16 @@
 }
 
 .grid {
-    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    background-color: lightgrey;
+    border: 2px solid black;
 }
 
 .square {
-    
+    height: 50px;
+    width: 50px;
+    background-color: lightblue;
+    border: 2px solid black;
 }
