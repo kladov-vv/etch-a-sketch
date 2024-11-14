@@ -20,7 +20,7 @@ function draw(event) {
 
 function newBoard() {
     let size = prompt('ENTER THE GRID SIZE');
-    if(size > 100 || size < 0) {
+    if(size > 100 || size < 1) {
         newBoard();
     } else {
         while(grid.firstChild) {
