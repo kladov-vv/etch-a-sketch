@@ -54,6 +54,6 @@ button {
 
 .square {
     background-color: white;
-    border: 0.01rem solid gray;
+    border: 0.1rem solid gray;
     /* width: calc(100% / 16); */
 }
