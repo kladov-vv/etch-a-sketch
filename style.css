@@ -5,16 +5,19 @@
 }
 
 .grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
     background-color: lightgrey;
     border: 2px solid black;
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    
 }
 
 .square {
-    height: 50px;
-    width: 50px;
     background-color: lightblue;
     border: 2px solid black;
+    
+    height: 50px;
+    width: 50px;
 }
