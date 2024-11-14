@@ -1,35 +1,61 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 62.5%;
     padding: 0;
     margin: 0;
 }
 
-.main {
-    background-color: grey;
+body {
+    display: flex;
+    flex-direction: column;
+    
     height: 100vh;
+}
 
+.header {
+    background-color: lightgray;
+    text-align: center;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 5rem;   
+}
+
+button {
+    background-color: white;
+    font-size: 2rem;
+    padding: 0.75rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    flex: auto;
+    
+    background-color: gray;
+    padding: 1rem;
 }
 
 .grid {
-    border: 1px solid gray;
-    max-width: 80vh;
-    padding: 1.5em;
-
     display: flex;
     flex-wrap: wrap;
+    
     flex: auto;
+    
+    border: 0.25rem solid black;
+    border-radius: 0.5rem;
+    aspect-ratio: 1 / 1;
+    max-width: 70vh;
 }
 
 .square {
-    background-color: lightgray;
+    background-color: white;
     border: 1px solid gray;
     width: calc(100% / 16);
-    aspect-ratio: 1 / 1;
-    
-    flex: auto; 
 }
