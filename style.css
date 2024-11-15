@@ -32,13 +32,13 @@ h1 {
 }
 
 button {
+    flex: auto;
     background-color: white;
     font-size: 2rem;
     padding: 1rem;
     border: 0.25rem solid black;
     border-radius: 1rem;
-    flex: auto;
-    
+    width: 20rem;
 }
 
 button:active {
@@ -68,5 +68,4 @@ button:active {
 
 .square {
     background-color: white;
-    /* border: 0.1rem solid lightgray; */
 }
