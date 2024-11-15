@@ -1,10 +1,12 @@
 const grid = document.querySelector('.grid');
 const btnNew = document.querySelector('#btn-new');
+const btnErase = document.querySelector('#btn-erase');
 const btnRandom = document.querySelector('#btn-random');
 let randomColor = false;
 
 grid.addEventListener('mouseover', draw);
 btnNew.addEventListener('click', newBoard);
+btnErase.addEventListener('click', clearBoard);
 btnRandom.addEventListener('click', randomColorOnOff);
 
 for (let i = 0; i < (16 * 16); i++) {
@@ -48,12 +50,18 @@ function newBoard() {
     } else {
         while(grid.firstChild) {
             grid.removeChild(grid.lastChild);
-       }
-       for (let i = 0; i < (size * size); i++) {
+        }
+        for (let i = 0; i < (size * size); i++) {
            const square = document.createElement('div');
            square.classList.add('square');
            square.style.width = `${100 / size}%`
            grid.appendChild(square);
        }
+    }
+}
+
+function clearBoard() {
+    for(const child of grid.childNodes) {
+        child.style.backgroundColor = 'white';
     }
 }
