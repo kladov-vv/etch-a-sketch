@@ -22,7 +22,7 @@ function randomColorOnOff() {
         btnRandom.textContent = 'BLACK';
     } else {
         randomColor = false;
-        btnRandom.textContent = 'RANDOM';
+        btnRandom.textContent = 'COLORS';
     }
 }
 

@@ -24,13 +24,21 @@ h1 {
     margin-bottom: 1rem;   
 }
 
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
 button {
     background-color: white;
     font-size: 2rem;
     padding: 1rem;
     border: 0.25rem solid black;
     border-radius: 1rem;
-
+    flex: auto;
+    
 }
 
 button:active {
