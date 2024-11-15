@@ -14,8 +14,14 @@ for (let i = 0; i < (16 * 16); i++) {
 function draw(event) {
     let target = event.target; 
     if (target.className == 'square') {
-        event.target.style.backgroundColor = 'red';
+        event.target.style.backgroundColor = randomColor();
     }
+}
+
+function randomColor() {
+    let randomRgb = () => Math.floor(Math.random() * 256);
+    let color = `rgb(${randomRgb()}, ${randomRgb()}, ${randomRgb()})`;
+    return color;
 }
 
 function newBoard() {
