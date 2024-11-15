@@ -28,7 +28,13 @@ button {
     background-color: white;
     font-size: 2rem;
     padding: 1rem;
+    border: 0.25rem solid black;
     border-radius: 1rem;
+
+}
+
+button:active {
+    border: 0.25rem solid gray;
 }
 
 .main {
@@ -54,5 +60,5 @@ button {
 
 .square {
     background-color: white;
-    border: 0.1rem solid gray;
+    /* border: 0.1rem solid lightgray; */
 }

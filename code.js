@@ -5,13 +5,29 @@ let randomColor = false;
 
 grid.addEventListener('mouseover', draw);
 btnNew.addEventListener('click', newBoard);
-btnRandom.addEventListener('click', () => randomColor = true);
+btnRandom.addEventListener('click', randomColorOnOff);
 
 for (let i = 0; i < (16 * 16); i++) {
     const square = document.createElement('div');
     square.classList.add('square');
     square.style.width = `${100 / 16}%`
     grid.appendChild(square);
+}
+
+function randomColorOnOff() {
+    if (randomColor === false) {
+        randomColor = true;
+        btnRandom.textContent = 'BLACK';
+    } else {
+        randomColor = false;
+        btnRandom.textContent = 'RANDOM';
+    }
+}
+
+function randomRGB() {
+    let randomNum = () => Math.floor(Math.random() * 256);
+    let color = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
+    return color;
 }
 
 function draw(event) {
@@ -41,13 +57,3 @@ function newBoard() {
        }
     }
 }
-
-function randomRGB() {
-    let randomNum = () => Math.floor(Math.random() * 256);
-    let color = `rgb(${randomNum()}, ${randomNum()}, ${randomNum()})`;
-    return color;
-}
-
-// function darkerColor(element) {
-//     element.style.opacity
-// }
